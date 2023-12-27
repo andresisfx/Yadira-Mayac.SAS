@@ -1,0 +1,6 @@
+.slick-image {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 30vh; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+    object-fit: cover; 
+   
+  }
