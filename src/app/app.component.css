@@ -47,3 +47,13 @@
   .custom-btn:active {
     transform: scale(1.1); /* Ajusta el valor según lo grande que quieras que se vean al hacer clic */
   }
+  .container-foot{
+    background-color: rgb(107, 125, 135) ;
+    padding: 20px;
+    width: 100vw;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }

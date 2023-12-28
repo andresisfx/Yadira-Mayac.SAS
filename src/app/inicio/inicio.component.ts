@@ -1,4 +1,4 @@
-import { Component,HostListener,ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { SmallcarouselComponent } from './smallcarousel/smallcarousel.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import {NgClass} from '@angular/common';
