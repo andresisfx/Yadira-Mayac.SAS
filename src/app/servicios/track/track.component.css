@@ -1,0 +1,15 @@
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/FondoAppYadi.PNG'); 
+    background-size: 100% 100%; /* Ajustado para llenar completamente el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1; 
+    
+    
+  }

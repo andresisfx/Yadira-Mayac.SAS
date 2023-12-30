@@ -3,6 +3,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { CertificadosComponent } from './certificados/certificados.component';
+import { CamionComponent } from './servicios/camion/camion.component';
+import { Component } from '@angular/core';
+import { TallerComponent } from './servicios/taller/taller.component';
+import { TrackComponent } from './servicios/track/track.component';
+import { VolquetaDobleComponent } from './servicios/volqueta-doble/volqueta-doble.component';
+import { VolquetaSencillaComponent } from './servicios/volqueta-sencilla/volqueta-sencilla.component';
+import { CarrotanqueComponent } from './servicios/carrotanque/carrotanque.component';
 
 export const routes: Routes = [
     {
@@ -11,8 +18,14 @@ export const routes: Routes = [
       },
       {
         path:"servicios",
-        component:ServiciosComponent
-      },
+        component:ServiciosComponent ,children:[
+        {path:'camion',component: CamionComponent},
+        {path:'taller',component: TallerComponent},
+        {path:'track',component: TrackComponent},
+        {path:'volquetadoble',component: VolquetaDobleComponent},
+        {path:'volquetasencilla',component: VolquetaSencillaComponent},
+        {path:'carrotanque',component:CarrotanqueComponent},
+      ]},
       {
         path:"empresa",
         component:EmpresaComponent
