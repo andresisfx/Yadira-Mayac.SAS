@@ -35,3 +35,13 @@
  color: white;
  font-size: larger;
 }
+.contact{
+    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
+    color: #000000; /* Color de texto de alerta en Bootstrap */
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+   
+    border-radius: 0.25rem; 
+}
+.letter a{
+    text-decoration: none;
+}

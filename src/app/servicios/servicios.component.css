@@ -21,13 +21,11 @@
     
 }
 .services{
-  position: sticky;
-  top: 0; /* Ajusta el valor según sea necesario para que se quede sticky en la posición deseada */
   display: flex;
   flex-direction: column;
   margin-left: 1vw;
   background-color: transparent;
-  justify-content: center;
+  
   align-items: center;
   padding: 1vw;
   padding-top: 0;
