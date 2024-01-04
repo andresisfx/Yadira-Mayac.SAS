@@ -1,1 +1,9 @@
-<p>sencilla-carousel works!</p>
+<div class="slick-container">
+    <ngx-slick-carousel [config]="slideConfig">
+      @for (slide of slides; track slide.img) {
+        <div ngxSlickItem class="slide">
+              <img src="{{ slide.img }}" alt="" class="slick-image">
+        </div>
+    }
+    </ngx-slick-carousel>
+  </div>

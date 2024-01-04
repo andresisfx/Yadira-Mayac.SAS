@@ -7,11 +7,11 @@
     min-height: 63vh;
     justify-content: center;
     padding: 1vw;
-    margin-top: 1vw;
+    margin-top: 3vw;
     border: solid 4px rgb(107, 125, 135) ;
     border-radius: 10px;
     background-color:rgb(107, 125, 135,0.6) ;
-
+    
     
 }
 .car-cont{
@@ -41,6 +41,9 @@
     padding: 1rem; /* Ajusta el relleno según sea necesario */
    
     border-radius: 0.25rem; 
+}
+.contact:hover{
+    transform: scale(1.1)
 }
 .letter a{
     text-decoration: none;

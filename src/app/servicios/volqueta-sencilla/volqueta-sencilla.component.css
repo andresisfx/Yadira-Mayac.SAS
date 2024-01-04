@@ -1,0 +1,49 @@
+.main-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70vw;
+    min-height: 63vh;
+    justify-content: center;
+    padding: 1vw;
+    margin-top: 3vw;
+    border: solid 4px rgb(107, 125, 135) ;
+    border-radius: 10px;
+    background-color:rgb(107, 125, 135,0.6) ;
+    
+    
+}
+.car-cont{
+    text-align: center; 
+    max-width: 45vw;
+    min-height: 40vh;
+     
+}
+.tittle{
+    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
+    color: #000000; /* Color de texto de alerta en Bootstrap */
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+   
+    border-radius: 0.25rem;
+
+}
+.text-container{
+    background-color:  rgb(107, 125, 135);
+}
+.text-container p{
+ color: white;
+ font-size: larger;
+}
+.contact{
+    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
+    color: #000000; /* Color de texto de alerta en Bootstrap */
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+   
+    border-radius: 0.25rem; 
+}
+.contact:hover{
+    transform: scale(1.1)
+}
+.letter a{
+    text-decoration: none;
+}

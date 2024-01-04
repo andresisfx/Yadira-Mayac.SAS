@@ -39,7 +39,7 @@
     max-width: 100%;
     width: 25vw;
     margin-left: 1vw;
-    margin-top: 5vh;
+    margin-top: 7vh;
   }
   .custom-btn:hover {
     background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */
@@ -47,4 +47,11 @@
     transform: scale(1.1) /* Cambia el color del borde al pasar el mouse (hover) */
   }
   
- 
+  .tittle{
+    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
+    color: #000000; /* Color de texto de alerta en Bootstrap */
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+    height: 8vh;
+    border-radius: 0.25rem;
+
+}
