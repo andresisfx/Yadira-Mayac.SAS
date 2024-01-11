@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "yadiramayac": {
+      "hosting": {
+        "yadiramayacsas": [
+          "yadiramayac"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "yadiramayac"
+  }
+}

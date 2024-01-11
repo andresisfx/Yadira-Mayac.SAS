@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Yadira-Mayacsas": {
+    "yadiramayacsas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Yadira-Mayacsas:build:production"
+              "buildTarget": "yadiramayacsas:build:production"
             },
             "development": {
-              "buildTarget": "Yadira-Mayacsas:build:development"
+              "buildTarget": "yadiramayacsas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,6 +98,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "yadiramayacsas:build:production",
+              "serveTarget": "yadiramayacsas:serve:production"
+            },
+            "development": {
+              "buildTarget": "yadiramayacsas:build:development",
+              "serveTarget": "yadiramayacsas:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

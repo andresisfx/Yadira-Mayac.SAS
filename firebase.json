@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "yadiramayacsas",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "us-east1"
+      }
+    }
+  ]
+}
