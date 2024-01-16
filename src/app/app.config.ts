@@ -8,5 +8,32 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), importProvidersFrom(provideFirebaseApp(() => initializeApp({"projectId":"yadiramayac","appId":"1:1051223021501:web:fb5efb32218b051936e4d4","storageBucket":"yadiramayac.appspot.com","locationId":"us-central","apiKey":"AIzaSyDMAa0zIJp3SckM8nWsJHRdswZ1fiEvzrU","authDomain":"yadiramayac.firebaseapp.com","messagingSenderId":"1051223021501"}))), importProvidersFrom(provideFirestore(() => getFirestore())), importProvidersFrom(provideStorage(() => getStorage()))]
+  providers: [
+    provideRouter(routes),
+    provideClientHydration(),
+    importProvidersFrom(
+      provideFirebaseApp(() =>
+        /* initializeApp({
+          projectId: 'yadiramayac',
+          appId: '1:1051223021501:web:fb5efb32218b051936e4d4',
+          storageBucket: 'yadiramayac.appspot.com',
+          locationId: 'us-central',
+          apiKey: 'AIzaSyDMAa0zIJp3SckM8nWsJHRdswZ1fiEvzrU',
+          authDomain: 'yadiramayac.firebaseapp.com',
+          messagingSenderId: '1051223021501',
+        }) */
+        initializeApp({
+          "projectId": "yadiramayac",
+          "appId": "1:1051223021501:web:fb5efb32218b051936e4d4",
+          "storageBucket": "yadiramayac.appspot.com",
+          "apiKey": "AIzaSyDMAa0zIJp3SckM8nWsJHRdswZ1fiEvzrU",
+          "authDomain": "yadiramayac.firebaseapp.com",
+          "messagingSenderId": "1051223021501"
+        })
+        
+      )
+    ),
+    importProvidersFrom(provideFirestore(() => getFirestore())),
+    importProvidersFrom(provideStorage(() => getStorage())),
+  ],
 };
