@@ -10,7 +10,7 @@ import { listAll,getDownloadURL,ref, uploadBytes, getStorage, StorageReference, 
   styleUrl: './certificados.component.css'
 })
 export class CertificadosComponent implements OnInit {
-  private fileCounter = 1; // Contador de archivos
+ 
   constructor(private storage:Storage ){
     
   }
@@ -19,24 +19,17 @@ export class CertificadosComponent implements OnInit {
     this.getPdf()
   }
   async uploadFile($event: any) {
-    const file = $event.target.files[0];
-      const folderPath = `${file.name}/`;
-      const folderRef = ref(this.storage,folderPath);
-      const folderExists = await listAll(folderRef)
-       // Inicializa el servicio de almacenamiento
-      console.log(folderExists)
+      const file = $event.target.files[0];
       const fileId= this.generateUniqueId()
       const fileName = `${fileId}_${Date.now()}_${file.name}`;
-       console.log(fileName)
-      // Incrementa el contador para el siguiente archivo
-      
-      // Construye la referencia al archivo en el Storage de Firebase
+   
       const pdfRef = ref(this.storage, `${file.name}/${fileName}`);
+      
+      
      try {
-        // Sube el archivo al Storage
+        
         const uploadResult = await uploadBytes(pdfRef, file);
-        // Almacena el nuevo valor del contador en la base de datos
-        // Obtiene la URL de descarga del archivo
+       
         const downloadURL = await getDownloadURL(pdfRef);
 
         console.log('Archivo subido con éxito:', uploadResult);
