@@ -10,7 +10,7 @@ import { listAll,getDownloadURL,ref, uploadBytes, getStorage, StorageReference, 
   styleUrl: './certificados.component.css'
 })
 export class CertificadosComponent implements OnInit {
- 
+  file: File | null = null;
   constructor(private storage:Storage ){
     
   }
@@ -34,6 +34,7 @@ export class CertificadosComponent implements OnInit {
 
         console.log('Archivo subido con éxito:', uploadResult);
         console.log('URL de descarga:', downloadURL);
+        this.file = null
       } catch (error) {
         console.error('Error al subir el archivo:', error);
       }
