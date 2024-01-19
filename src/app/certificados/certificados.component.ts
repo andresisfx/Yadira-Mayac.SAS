@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
+import { reference } from '@popperjs/core';
 
 @Component({
   selector: 'app-certificados',
@@ -12,14 +13,20 @@ import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fir
 export class CertificadosComponent implements OnInit {
   selectedFiles: any;
   loading= false;
+  idUser: string='';
+  selectedPdf: string ='';
+
+  redirectToPdf(pdfUrl: string): void {
+    window.open(pdfUrl, '_blank');
+  }
   constructor(private storage: Storage) {}
 
   pdfs: string[] = [];
   
   ngOnInit(): void {
-    this.getPdf();
+    // this.getPdf();
   }
-
+ 
    uploadFiles($event: any) {
     const files: FileList = $event.target.files;
     if (files.length === 0) {
@@ -69,15 +76,19 @@ export class CertificadosComponent implements OnInit {
       this.loading=false;
       console.log(error)});
   }
-
+  
   getPdf() {
-    const certificadosRef = ref(this.storage, `certificados`);
+    console.log(this.idUser)
+    const certificadosRef = ref(this.storage, `${this.idUser.trim()}`);
     listAll(certificadosRef).then(async certs => {
+      console.log(certs)
       for (let cert of certs.items) {
+       
         const url = await getDownloadURL(cert);
         this.pdfs.push(url);
-        console.log(this.pdfs);
+        console.log(url)
       }
+      console.log(this.pdfs)
     }).catch(error => console.log(error));
   }
 }

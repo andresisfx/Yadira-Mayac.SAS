@@ -5,18 +5,20 @@
        
     </div>
 </form>
+<form (ngSubmit)="getPdf()">
+  <input type="text" id="idUser" [(ngModel)]="idUser" name="idUser">
+  <button type="submit">Consultar certificado</button>
+</form>
 <div class="container">
-    @for (pdf of pdfs; track pdf ) {
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-        <div class="card">
-            <img src={{pdfs[0]}} class="card-img-top" alt="pdf">
-            <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <select [(ngModel)]="selectedPdf" (change)="redirectToPdf(selectedPdf)">
+            @for (pdf of pdfs; track pdf) {
+          <option  [value]="pdf">{{pdf.substring(70)}}</option>
+            }
+        </select>
+      </div>
     </div>
-}
+  </div>
 </div>
