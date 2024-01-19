@@ -1,60 +1,83 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { listAll,getDownloadURL,ref, uploadBytes, getStorage, StorageReference, Storage} from '@angular/fire/storage';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-certificados',
   standalone: true,
-  imports: [FormsModule,],
+  imports: [FormsModule],
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })
 export class CertificadosComponent implements OnInit {
-  file: File | null = null;
-  constructor(private storage:Storage ){
-    
-  }
-  pdfs:string[]=[]
-  ngOnInit(): void {
-    this.getPdf()
-  }
-  async uploadFile($event: any) {
-      const file = $event.target.files[0];
-      const fileId= this.generateUniqueId()
-      const fileName = `${fileId}_${Date.now()}_${file.name}`;
-   
-      const pdfRef = ref(this.storage, `${file.name}/${fileName}`);
-      
-      
-     try {
-        
-        const uploadResult = await uploadBytes(pdfRef, file);
-       
-        const downloadURL = await getDownloadURL(pdfRef);
+  selectedFiles: any;
+  loading= false;
+  constructor(private storage: Storage) {}
 
-        console.log('Archivo subido con éxito:', uploadResult);
-        console.log('URL de descarga:', downloadURL);
-        this.file = null
-      } catch (error) {
-        console.error('Error al subir el archivo:', error);
-      }
-    
+  pdfs: string[] = [];
+  
+  ngOnInit(): void {
+    this.getPdf();
   }
-  generateUniqueId(): string {
-    const timestamp = new Date().getTime();
-    const randomString = Math.random().toString(36).substring(2, 8);
-    return `${timestamp}_${randomString}`;
+
+   uploadFiles($event: any) {
+    const files: FileList = $event.target.files;
+    if (files.length === 0) {
+      return; 
+    }
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      this.loading = true
+      
+      this.uploadFile(file);
+    }
+  } 
+  
+  
+  uploadFile = (file: File) => {
+    console.log("loading ...", this.loading)
+    const folderName = file.name.replace(/\.[^/.]+$/, ""); 
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().replace(/[-T:.Z]/g, "");
+    const fileNameWithDate = `${formattedDate}_${file.name}`;
+    const pdfRef = ref(this.storage, `${folderName}/${fileNameWithDate}`);
+
+    //veo si carpeta existe
+    const folderRef = ref(this.storage, folderName);
+    listAll(folderRef)
+      .then(() => {
+        this.uploadFileInsideFolder(pdfRef, file);
+      })
+      .catch(() => {
+        // nuva carpeta si no hay 
+        const createFolderRef = ref(this.storage, folderName);
+        uploadBytes(createFolderRef, new Blob()).then(() => {
+          this.uploadFileInsideFolder(pdfRef, file);
+        }).catch(error =>{
+          this.loading=false;
+           console.log(error)
+        });
+      });
   }
-  getPdf(){
-    const certificadosRef= ref(this.storage,`certificados`);
-    listAll(certificadosRef).then(async certs=>{
-      for(let cert of certs.items ){
-        this.pdfs=[];
+
+  uploadFileInsideFolder(pdfRef: any, file: File) {
+    uploadBytes(pdfRef, file).then(x => {
+      this.loading=false;
+      console.log(x);
+      console.log("loading ...", this.loading)
+    }).catch(error => {
+      this.loading=false;
+      console.log(error)});
+  }
+
+  getPdf() {
+    const certificadosRef = ref(this.storage, `certificados`);
+    listAll(certificadosRef).then(async certs => {
+      for (let cert of certs.items) {
         const url = await getDownloadURL(cert);
         this.pdfs.push(url);
-        console.log(this.pdfs)
-        
+        console.log(this.pdfs);
       }
-    }).catch(error=>console.log(error)) 
+    }).catch(error => console.log(error));
   }
 }
