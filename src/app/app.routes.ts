@@ -10,6 +10,8 @@ import { TrackComponent } from './servicios/track/track.component';
 import { VolquetaDobleComponent } from './servicios/volqueta-doble/volqueta-doble.component';
 import { VolquetaSencillaComponent } from './servicios/volqueta-sencilla/volqueta-sencilla.component';
 import { CarrotanqueComponent } from './servicios/carrotanque/carrotanque.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
@@ -34,5 +36,13 @@ export const routes: Routes = [
       {
         path:"certificados",
         component:CertificadosComponent
+      },
+      {
+        path:'admin',
+        component:AdminComponent
+      },
+      {
+        path:'login',
+        component:LoginComponent
       }
 ];
