@@ -12,6 +12,7 @@ import { VolquetaSencillaComponent } from './servicios/volqueta-sencilla/volquet
 import { CarrotanqueComponent } from './servicios/carrotanque/carrotanque.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import {canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 
 export const routes: Routes = [
     {
@@ -39,7 +40,7 @@ export const routes: Routes = [
       },
       {
         path:'admin',
-        component:AdminComponent
+        component:AdminComponent, ...canActivate(()=>redirectUnauthorizedTo(['/login']))
       },
       {
         path:'login',

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 import { reference } from '@popperjs/core';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -11,7 +13,7 @@ import { reference } from '@popperjs/core';
   styleUrl: './admin.component.css'
 })
 export class AdminComponent {
-  constructor(private storage: Storage) {}
+  constructor(private storage: Storage,private userService:UserService, private router:Router) {}
   pdfs: string[] = [];
   loading= false;
   uploadFiles($event: any) {
@@ -64,4 +66,10 @@ export class AdminComponent {
       console.log(error)});
   }
   
+  logOutClick(){
+    this.userService.logOut()
+    .then(()=>{
+      this.router.navigate(['/'])
+    })
+  }
 }
