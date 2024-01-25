@@ -1,17 +1,21 @@
 
 <form (ngSubmit)="getPdf()">
   <input type="text" id="idUser" [(ngModel)]="idUser" name="idUser">
-  <button type="submit">Consultar certificado</button>
+  <button type="submit" [disabled]="isLoading">Consultar certificado</button>
 </form>
 <div class="container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">
         <select [(ngModel)]="selectedPdf" (change)="redirectToPdf(selectedPdf)">
-            @for (pdf of pdfs; track pdf) {
-          <option  [value]="pdf">{{pdf.substring(70)}}</option>
+            @for (pdf of pdfs; track pdf){
+                <option  [value]="pdf">
+                    <!-- {{pdf.substring(70)}} -->
+                    {{ extractFileName(pdf) }}
+                </option>
             }
-        </select>
+          </select>
+          
       </div>
     </div>
   </div>
