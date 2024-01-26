@@ -1,63 +1,87 @@
 <div class="background-image"></div> 
 <div class=" main-container">
-      <div class="mainCarousel" class="carousel">
-         <app-carousel></app-carousel>
+    <div class="custom-navbar "  style="z-index: 2; position: absolute; top: 0; left: 0; width: 100%;">
+      <div class="mainNav d-flex justify-content-center align-items-center">
+        <div class="informacion-empresa text-center">
+          <p class="text-white"><i class="bi-geo"></i> Carrera 47A No. 95-56, Oficina 606 - </p>
+          <p class="text-white"><i class="bi-whatsapp"></i> Whatsapp: (+57) 313 8918297 - (+57) 313 4312815 -</p> 
+          <p class="text-white"><i class="bi-envelope"></i> <a href="mailto:yadiramayac35@gmail.com">yadiraMayacsas.com.co</a></p>
+        </div>
+        
+        <div class="imageAndButton d-flex align-items-center">
+          <div class="navbar-brand ml-0">
+            <img src="../assets/images/yadiraLogo3.png" alt="Logo" height="90" width="200" style="border-radius: 20px; margin: 0; padding: 0;">
+          </div>
+          <div class="ml-3">
+            <button class="btn btn-transparent  custom-btn" type="button" routerLink="/">Inicio</button>
+            <button class="btn  custom-btn" type="button" routerLink="/servicios">Servicios</button>
+            <button class="btn  custom-btn" type="button" routerLink="/empresa">Empresa</button>
+            <button class="btn  custom-btn" type="button" routerLink="/certificados">Certificados tributarios
+            </button>
+          </div>
+        </div>
       </div>
-  
-  <!-- Carrusel Quiénes Somos --> 
-  
-    <div class="about-cont" [ngClass]="showAboutCont? 'show':''">
-        <div class="title">
-          <h2>Quiénes Somos?</h2>
+    </div>
+    <div class="mainCarousel" class="carousel" style="z-index: 1;position: absolute; top: 0; left: 0; width: 100%;">
+      <app-carousel></app-carousel>
+    </div>
+    <div class="spacer" style="height: 110vh;"></div>
+
+    <!-- Carrusel Quiénes Somos --> 
+      
+        <div class="about-cont" [ngClass]="showAboutCont? 'show':''" style="z-index: 300;">
+            <div class="title">
+              <h2>Quiénes Somos?</h2>
+          </div>
+          <div class="grid-container ml-5">
+            <div class="content">
+              <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. Earum. </p>
+            </div>
+            <div class="small-cont">
+              <app-smallcarousel></app-smallcarousel>
+            </div>
+          </div>
+      </div> 
+      
+      <div class="red-cont" [ngClass]="showAboutCont2? 'show':''"style="z-index: 350;">
+        <div class="title2">
+          <h2>Misión</h2>
       </div>
-      <div class="grid-container ml-5">
-        <div class="content">
+      <div class="grid-container">
+        <div class="content2">
           <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. Earum. </p>
         </div>
         <div class="small-cont">
-          <app-smallcarousel></app-smallcarousel>
+          <img class="image" src="../../assets/images/mision-logo.jpg" alt="">
         </div>
       </div>
-  </div> 
-   
-  <div class="red-cont" [ngClass]="showAboutCont2? 'show':''">
-    <div class="title2">
-      <h2>Misión</h2>
-  </div>
-  <div class="grid-container">
-    <div class="content2">
-      <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. Earum. </p>
+    </div>  
+    <div class="about-cont" [ngClass]="showAboutCont3? 'show':''" style="z-index: 3;">
+      <div class="title">
+        <h2>Visión</h2>
     </div>
-    <div class="small-cont">
-      <img class="image" src="../../assets/images/mision-logo.jpg" alt="">
+    <div class="grid-container">
+      <div class="content">
+        <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. </p>
+      </div>
+      <div class="small-cont" >
+        <img class="image" src="../../assets/images/logo-vision.jpg" alt="">
+      </div>
     </div>
-  </div>
-</div>  
-<div class="about-cont" [ngClass]="showAboutCont3? 'show':''">
-  <div class="title">
-    <h2>Visión</h2>
-</div>
-<div class="grid-container">
-  <div class="content">
-    <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. </p>
-  </div>
-  <div class="small-cont" >
-    <img class="image" src="../../assets/images/logo-vision.jpg" alt="">
-  </div>
-</div>
+    </div> 
+    <div class="red-cont" [ngClass]="showAboutCont4? 'show':''" style="z-index: 3;">
+        <div class="title2">
+            <h2>politica integradora</h2>
+        </div>
+        <div class="grid-container">
+            <div class="content2">
+              <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. Earum.</p>
+            </div>
+            <div class="small-cont">
+              <img class="image" src="../../assets/images/logo-politica-integrada.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </div> 
-<div class="red-cont" [ngClass]="showAboutCont4? 'show':''">
-  <div class="title2">
-    <h2>politica integradora</h2>
-</div>
-<div class="grid-container">
-  <div class="content2">
-    <p>Yadira Mayac S.A.S es una empresa de transporte especial legalmente constituida en Colombia ante la cámara de comercio con número de identificación tributaria 900.325.433-6 y registro nacional de turismo 35589, habilitada ante el Ministerio de Transporte con resolución 100 de 2013 y Rehabilitada con resolución 052 de 2017.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus ad, temporibus cumque voluptates facere suscipit praesentium odio ea eius assumenda delectus ut perferendis eaque architecto placeat, consequuntur laboriosam. Earum.</p>
-  </div>
-  <div class="small-cont">
-    <img class="image" src="../../assets/images/logo-politica-integrada.jpg" alt="">
-  </div>
-</div>
-</div>  
     
 

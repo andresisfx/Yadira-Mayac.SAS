@@ -10,13 +10,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   styleUrl: './carousel.component.css'
 })
 export class CarouselComponent {
-  // slides =[ "assets/images/mulaContainer.jpeg","assets/images/mulaNegra.jpeg","assets/images/volquetaNaranja.jpeg","assets/images/volquetaAzul.jpeg","assets/images/volquetaRoja.jpeg"]; 
   slides = [
     {img: "assets/images/mulaContainer.jpeg"},
     {img: "assets/images/mulaNegra.jpeg"},
-    {img: "assets/images/volquetaNaranja.jpeg"},
-    {img: "assets/images/volquetaAzul.jpeg"},
-    {img: "assets/images/volquetaRoja.jpeg"}
+    {img: "assets/images/mulaAzul.jpeg"},
+    // {img: "assets/images/volquetaNaranja.jpeg"},
+    // {img: "assets/images/volquetaAzul.jpeg"},
+    // {img: "assets/images/volquetaRoja.jpeg"}
   ];
   slideConfig = {
     slidesToShow: 1,
