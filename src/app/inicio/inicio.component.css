@@ -112,14 +112,17 @@
 }
 
 .image{
-  width: 15vw;
+  width: 22vw;
+  height: 15vh;
 }
 /* navBar style */
 .custom-navbar {
-  background-color: rgb(107, 125, 135,60%); 
-  height: 15vh;
+  background-color: rgb(107, 125, 135,20%); 
+  max-height: 15vh;
   width: 100%;
-  
+}
+.buttons{
+  margin-top: 2vh;
 }
 
 .text-red {
@@ -134,7 +137,7 @@
 }
 
 .informacion-empresa {
-  background-color: rgb(107, 125, 135,60%);
+  background-color: rgb(107, 125, 135,10%);
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -144,6 +147,7 @@
   align-items: center;
   justify-content: center;
   height: 4vh;
+  font-size: 18px;
 }
 
 /* .imageAndButton {
@@ -156,6 +160,8 @@
   background-color: transparent;
   margin-left: 100px;
   color: #fff; 
+  font-size: 18px;
+
 }
 .custom-btn:hover {
   background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */

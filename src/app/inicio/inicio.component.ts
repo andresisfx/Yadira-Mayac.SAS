@@ -2,10 +2,12 @@ import { Component,HostListener } from '@angular/core';
 import { SmallcarouselComponent } from './smallcarousel/smallcarousel.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import {NgClass} from '@angular/common';
+import { RouterOutlet,RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [SmallcarouselComponent,CarouselComponent,NgClass],
+  imports: [SmallcarouselComponent,CarouselComponent,NgClass,RouterLink],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
