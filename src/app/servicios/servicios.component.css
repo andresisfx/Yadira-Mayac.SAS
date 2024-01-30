@@ -9,7 +9,7 @@
     background-size: 100% 100%; /* Ajustado para llenar completamente el contenedor */
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.9;
     z-index: -1; 
     margin: 0;
 }
@@ -48,7 +48,7 @@
   }
   
   .tittle{
-    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
+    background-color: rgb(107, 125, 135); /* Color de fondo de alerta en Bootstrap */
     color: #000000; /* Color de texto de alerta en Bootstrap */
     padding: 1rem; /* Ajusta el relleno según sea necesario */
     height: 7vh;

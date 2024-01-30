@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 import { reference } from '@popperjs/core';
+import { RouterOutlet,RouterLink } from '@angular/router';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-certificados',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,NavBarComponent],
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })

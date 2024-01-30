@@ -5,12 +5,14 @@ import { BrowserModule, } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet,RouterLink } from '@angular/router';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,CommonModule],
+  imports: [FormsModule,ReactiveFormsModule,CommonModule,NavBarComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
