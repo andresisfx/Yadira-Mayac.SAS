@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
-import { reference } from '@popperjs/core';
 
 @Component({
   selector: 'app-certificados',
@@ -46,7 +45,7 @@ export class CertificadosComponent implements OnInit {
       .catch(error => console.log(error)).
       finally(() => {
         this.isLoading = false;
-        this.idUser = '';
+        // this.idUser = '';
       });
   }
 
