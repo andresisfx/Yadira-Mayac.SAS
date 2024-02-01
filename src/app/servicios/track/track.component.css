@@ -6,10 +6,10 @@
     min-height: 63vh;
     justify-content: center;
     padding: 1vw;
-    margin-top: 4vw;
-    border: solid 4px rgb(107, 125, 135) ;
+    margin-top: 7vh;
+    /* border: solid 4px rgb(107, 125, 135) ; */
     border-radius: 10px;
-    background-color:transparent;
+    background-color:  rgb(107, 125, 135,50%);
     
     
 }
@@ -17,28 +17,35 @@
     text-align: center; 
     max-width: 45vw;
     min-height: 40vh;
+    margin-top: 1vh;
      
 }
 .tittle{
-    background-color: rgb(237,50,55); /* Color de fondo de alerta en Bootstrap */
-    color: #000000; /* Color de texto de alerta en Bootstrap */
-    padding: 1rem; /* Ajusta el relleno según sea necesario */
-    height: 7vh;
+    background-color:transparent; 
+    color: #000000; 
+    padding: 1rem; 
+    height: 2vh;
     border-radius: 0.25rem;
-    margin-left: 2vh;
+    margin-left: -0px;
+    text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
+    margin-top: 0.5vh;
 }
 
 .text-container{
-    background-color:  rgb(107, 125, 135);
+    background-color:  rgb(107, 125, 135,90%);
+    font-size: 3vh;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    border: transparent;
+    border-radius: 10px;
 }
 .text-container p{
  color: white;
  font-size: larger;
 }
 .contact{
-    background-color: transparent; /* Color de fondo de alerta en Bootstrap */
-    color: #000000; /* Color de texto de alerta en Bootstrap */
-    padding: 1rem; /* Ajusta el relleno según sea necesario */
+    background-color: transparent; 
+    color: #000000; 
+    padding: 1rem; 
    
     border-radius: 0.25rem; 
 }

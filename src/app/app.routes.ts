@@ -13,7 +13,7 @@ import { CarrotanqueComponent } from './servicios/carrotanque/carrotanque.compon
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import {canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
-
+import { InicioComponent2 } from './servicios/inicio/inicio.component';
 export const routes: Routes = [
     {
         path:"",
@@ -28,6 +28,7 @@ export const routes: Routes = [
         {path:'volquetadoble',component: VolquetaDobleComponent},
         {path:'volquetasencilla',component: VolquetaSencillaComponent},
         {path:'carrotanque',component:CarrotanqueComponent},
+        {path:'',component:InicioComponent2}
       ]},
       {
         path:"empresa",

@@ -9,7 +9,7 @@
     background-size: 100% 100%; /* Ajustado para llenar completamente el contenedor */
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.9;
+    opacity: 0.85;
     z-index: -1; 
     margin: 0;
 }
@@ -48,10 +48,12 @@
   }
   
   .tittle{
-    background-color: rgb(107, 125, 135); /* Color de fondo de alerta en Bootstrap */
+    background-color: transparent; /* Color de fondo de alerta en Bootstrap */
     color: #000000; /* Color de texto de alerta en Bootstrap */
     padding: 1rem; /* Ajusta el relleno según sea necesario */
     height: 7vh;
     border-radius: 0.25rem;
+    text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }

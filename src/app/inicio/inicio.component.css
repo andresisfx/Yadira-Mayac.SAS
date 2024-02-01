@@ -160,7 +160,7 @@
   background-color: transparent;
   margin-left: 100px;
   color: #fff; 
-  font-size: 24;
+  font-size: 2vh;
 
 }
 .custom-btn:hover {
@@ -175,3 +175,4 @@
 .whatsappButton:hover{
   transform: scale(1.2) 
 }
+

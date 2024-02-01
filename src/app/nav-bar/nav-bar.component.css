@@ -1,6 +1,7 @@
 .custom-navbar {
   background-color: rgb(107, 125, 135,60%); 
-  height: 7vh;
+  max-height: 15vh;
+
 }
 
 .text-red {
@@ -34,9 +35,10 @@
   justify-content: center;
 } */
 .custom-btn {
-  background-color: rgb(237,50,55); 
+  background-color: transparent; 
   margin-left: 100px;
   color: #fff; 
+  font-size: 2vh;
 }
 .custom-btn:hover {
   background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */
