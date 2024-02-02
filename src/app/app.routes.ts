@@ -14,6 +14,8 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import {canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 import { InicioComponent2 } from './servicios/inicio/inicio.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
+import { TrabajaConNosotrosComponent } from './trabaja-con-nosotros/trabaja-con-nosotros.component';
 export const routes: Routes = [
     {
         path:"",
@@ -46,5 +48,13 @@ export const routes: Routes = [
       {
         path:'login',
         component:LoginComponent
+      },
+      {
+        path:'contactanos',
+        component:ContactanosComponent
+      },
+      {
+        path:'trabajaconnosotros',
+        component:TrabajaConNosotrosComponent
       }
 ];
