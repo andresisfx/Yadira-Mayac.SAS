@@ -48,7 +48,7 @@ export class CertificadosComponent implements OnInit {
       .catch(error => console.log(error)).
       finally(() => {
         this.isLoading = false;
-        this.idUser = '';
+        // this.idUser = '';
       });
   }
 
