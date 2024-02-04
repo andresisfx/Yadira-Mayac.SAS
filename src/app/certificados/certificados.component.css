@@ -1,9 +1,12 @@
 /* certificados.component.scss */
-.content-container {
-  max-width: 800px;
+.main-container {
+  width: 50vw;
   margin: 0 auto;
-  padding: 20px;
-  text-align: left;
+  padding: 2vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgba(136, 159, 172, 0.6);
 }
 
 .search-form {
@@ -81,4 +84,7 @@
   box-sizing: border-box; 
   margin-top: 5px; 
   
+}
+.spacer{
+  height: 30vh;
 }

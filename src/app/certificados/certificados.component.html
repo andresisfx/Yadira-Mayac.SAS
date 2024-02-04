@@ -1,6 +1,7 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="content-container">
+<div class="main-container mt-5">
+  
   <form (ngSubmit)="getPdf()" class="search-form">
     <input type="text" id="idUser" [(ngModel)]="idUser" name="idUser" class="search-input">
     <button type="submit" [disabled]="isLoading" class="search-button">
@@ -22,6 +23,10 @@
           </select>
         </div>
   </div>
+
+</div>
+<div class="spacer">
+  
 </div>
 
   
