@@ -1,0 +1,37 @@
+.main-container {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 2vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(136, 159, 172, 0.6);
+  }
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+  }
+  
+  .search-input {
+    width: 40vw;
+    padding: 0.2vh;
+    border-radius: 10px;
+}
+.input-text{
+    width: 40vw;
+    padding: 0.5vh;
+     border-radius:5px;
+}
+  
+  .send-button {
+    background-color: #ed3737;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }

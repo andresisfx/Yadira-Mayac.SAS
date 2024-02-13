@@ -1,2 +1,19 @@
 <app-nav-bar></app-nav-bar>
-<p>contactanos works!</p>
+<div class="main-container mt-5" >
+    <h3>Envianos un mensaje y con gusto resolveremos tus dudas!!</h3>
+
+      <form [formGroup]="Form" (ngSubmit)="sendEmail()" class="search-form">
+        <label>Name</label>
+        <input type="text" formControlName="name"  [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"  class="form-control search-input"/>
+        <label>Email</label>
+        <input type="text" name="email"  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"  class="form-control search-input"/>
+        <label>Message</label>
+        <textarea name="message"  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" required class="input-text"></textarea>
+        <button type="submit" class="send-button mt-3">
+          Enviar
+        </button>
+      </form>
+   
+   
+  </div>
+  
