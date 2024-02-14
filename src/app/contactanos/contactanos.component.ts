@@ -22,6 +22,17 @@ export class ContactanosComponent implements OnInit{
   });
   submitted=false
   
+  clearFormValidators() {
+    if (!this.Form) {
+      console.error("El formulario no está inicializado.");
+      return;
+    }
+  
+    Object.keys(this.Form.controls).forEach(key => {
+      this.Form.get(key)?.clearValidators();
+      this.Form.get(key)?.updateValueAndValidity();
+    });
+  }
   constructor(private formBuilder: FormBuilder) { }
   ngOnInit() {
     this.Form=this.formBuilder.group({
@@ -62,8 +73,17 @@ export class ContactanosComponent implements OnInit{
     })
     .then((response) => {
       console.log("Email sent successfully!", response);
+      this.Form.patchValue({
+        name: '',
+        email: '',
+        message: ''
+      });
+     this.clearFormValidators()
+     
+
     }, (error) => {
       console.error("Error sending email:", error);
     });
   }
+  
 }
