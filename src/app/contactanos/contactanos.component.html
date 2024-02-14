@@ -3,12 +3,60 @@
     <h3>Envianos un mensaje y con gusto resolveremos tus dudas!!</h3>
 
       <form [formGroup]="Form" (ngSubmit)="sendEmail()" class="search-form">
-        <label>Name</label>
-        <input type="text" formControlName="name"  [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"  class="form-control search-input"/>
-        <label>Email</label>
-        <input type="text" name="email"  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"  class="form-control search-input"/>
-        <label>Message</label>
-        <textarea name="message"  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" required class="input-text"></textarea>
+        <div class="form-group">
+              <label>Name</label>
+              <input type="text" 
+              formControlName="name" 
+              [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"  class="form-control search-input"/>
+              @if (submitted && f['name'].errors) {
+                <div class="invalid-feedback">
+                  @if (f['name'].errors['required']) {
+                  <div>Este campo es obligatorio</div>
+                  }
+                  @if (f['name'].errors['minLength']) {
+                  <div>El nombre debe ser minimo de 3 letras</div>
+                  }
+                  @if (f['name'].errors['maxLength']) {
+                    <div>El nombre no puede superar los 60 caracteres</div>
+                  }
+                </div>
+                }        
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text"
+             formControlName="email" 
+              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"  class="form-control search-input "/>
+              @if (submitted && f['email'].errors) {
+                <div class="invalid-feedback">
+                  @if (f['email'].errors['required']) {
+                  <div>El correo es obligatorio</div>
+                  }
+              @if (f['email'].errors['email']) {
+                  <div>Por favor coloque un correo valido</div>
+                  }
+                </div>
+                } 
+        </div>
+        <div class="form-group">
+                <label>Message</label>
+               <textarea formControlName="message"
+                [ngClass]="{ 'is-invalid': submitted && f['message'].errors }" 
+                class="form-control input-text"></textarea>
+                @if (submitted && f['message'].errors) {
+                  <div class="invalid-feedback">
+                    @if (f['message'].errors['required']) {
+                    <div>Este campo es obligatorio</div>
+                    }
+                    @if (f['message'].errors['minLength']) {
+                    <div>El mensaje debe ser minimo de 3 letras</div>
+                    }
+                    @if (f['message'].errors['maxLength']) {
+                      <div>El mensaje no puede superar los 1000 caracteres</div>
+                    }
+                  </div>
+                  }
+        </div>
         <button type="submit" class="send-button mt-3">
           Enviar
         </button>

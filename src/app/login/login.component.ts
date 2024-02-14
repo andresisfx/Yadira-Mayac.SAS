@@ -21,8 +21,9 @@ export class LoginComponent  implements OnInit{
     email: new FormControl(''),
     password: new FormControl('')
   });
+  
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private userService: UserService,private router:Router){}
+  constructor(private formBuilder: FormBuilder,private userService: UserService,private router:Router){ }
   ngOnInit() {
     this.loginForm=this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -33,16 +34,16 @@ export class LoginComponent  implements OnInit{
           Validators.minLength(6),
           Validators.maxLength(40)
         ]
-     ]})
-     
-  }
-  
-  get f(): { [key: string]: AbstractControl } {
-    return this.loginForm.controls;
-  }
-  onSubmit(): void {
+      ]})
+      
+    }
+    
+    get f(): { [key: string]: AbstractControl } {
+      return this.loginForm.controls;
+    }
+    onSubmit(): void {
     this.submitted = true;
-
+     
     if (this.loginForm.invalid) {
       return;
     }
@@ -50,7 +51,7 @@ export class LoginComponent  implements OnInit{
     console.log(JSON.stringify(this.loginForm.value, null, 2));
     this.userService.login(this.loginForm.value)
     .then(res=>{
-      console.log(res);
+      
       this.router.navigate(['/admin'])
      })
     .catch(error=>error.message)

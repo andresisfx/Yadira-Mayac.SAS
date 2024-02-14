@@ -17,9 +17,11 @@ export class ContactanosComponent implements OnInit{
   
   Form: FormGroup = new FormGroup({    
     email: new FormControl(''),
-    name: new FormControl('')
+    name: new FormControl(''),
+    message: new FormControl('')
   });
   submitted=false
+  
   constructor(private formBuilder: FormBuilder) { }
   ngOnInit() {
     this.Form=this.formBuilder.group({
@@ -28,27 +30,31 @@ export class ContactanosComponent implements OnInit{
         '',
         [
           Validators.required,
-          Validators.minLength(1),
+          Validators.minLength(3),
+          Validators.maxLength(70)
+        ]
+      ],message: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(5),
           Validators.maxLength(1000)
         ]
-     ]})
-     
-  }
-  get f(): { [key: string]: AbstractControl } {
-    return this.Form.controls;
-  }
- 
-  sendEmail():void {
-    this.submitted = true;
-
+      ]})
+      
+    }
+    get f(): { [key: string]: AbstractControl } {
+      return this.Form.controls;
+    }
+    
+    sendEmail():void {
+      this.submitted = true;
+      console.log(this.Form.value)
+      
     if (this.Form.invalid) {
       return;
     }
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-      to_name: "Recipient Name",
-      from_name: "Your Name",
-      message: "This is a test email sent from Angular using EmailJS!"
-    }, "YOUR_USER_ID")
+    emailjs.sendForm("service_i121ii1", "template_h2kps5b", "YOUR_USER_ID")
     .then((response) => {
       console.log("Email sent successfully!", response);
     }, (error) => {
