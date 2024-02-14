@@ -47,14 +47,19 @@ export class ContactanosComponent implements OnInit{
       return this.Form.controls;
     }
     
-    sendEmail():void {
+   async sendEmail() {
       this.submitted = true;
       console.log(this.Form.value)
       
     if (this.Form.invalid) {
       return;
     }
-    emailjs.sendForm("service_i121ii1", "template_h2kps5b", "YOUR_USER_ID")
+    emailjs.init("_vuU3d4tCTdO0yWpk")
+    let response =await emailjs.send("service_i121ii1", "template_w2k7l1u",{
+      from_name:this.Form.value.name,
+      fron_email:this.Form.value.email,
+      message:this.Form.value.message
+    })
     .then((response) => {
       console.log("Email sent successfully!", response);
     }, (error) => {
