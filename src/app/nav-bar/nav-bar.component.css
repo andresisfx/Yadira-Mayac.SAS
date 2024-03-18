@@ -36,9 +36,9 @@
 } */
 .custom-btn {
   background-color: transparent; 
-  margin-left: 100px;
+  margin-left: 3vw;
   color: #fff; 
-  font-size: 2vh;
+  font-size: 2.8vh;
 }
 .custom-btn:hover {
   background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */

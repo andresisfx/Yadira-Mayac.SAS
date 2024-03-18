@@ -7,9 +7,9 @@
         type="text"
         formControlName="email"
         class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+        [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors }"
       />
-      @if (submitted && f['email'].errors) {
+      @if (f['email'].errors) {
       <div class="invalid-feedback">
         @if (f['email'].errors['required']) {
         <div>Email is required</div>
@@ -27,9 +27,9 @@
         type="password"
         formControlName="password"
         class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+        [ngClass]="{ 'is-invalid': f['password'].touched && f['password'].errors }"
       />
-      @if (submitted && f['password'].errors) {
+      @if (f['password'].errors) {
       <div class="invalid-feedback">
         @if (f['password'].errors['required']) {
         <div>Password is required</div>
