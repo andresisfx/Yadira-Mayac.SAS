@@ -9,7 +9,7 @@
     background-size: 100% 100%; /* Ajustado para llenar completamente el contenedor */
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.55;
+    opacity: 0.35;
     z-index: -1; 
     margin: 0;
 }
