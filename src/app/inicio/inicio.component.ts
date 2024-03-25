@@ -23,11 +23,11 @@ export class InicioComponent implements OnInit {
   onScroll() {
     const scrollPosition = window.scrollY;
 
-    // Ajusta el valor de 300 según la posición de desplazamiento en la que deseas que aparezca el div
-    this.showAboutCont = scrollPosition > 200;
-    this.showAboutCont2 = scrollPosition > 800;
-    this.showAboutCont3 = scrollPosition > 1300;
-    this.showAboutCont4 = scrollPosition > 1900;
+    
+    this.showAboutCont = scrollPosition > 600; //200
+    this.showAboutCont2 = scrollPosition > 1000;//800
+    this.showAboutCont3 = scrollPosition > 1600;//1300
+    this.showAboutCont4 = scrollPosition > 2000;//1900
   }
   constructor(private modalService: ModalService) {}
 

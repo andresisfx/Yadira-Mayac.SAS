@@ -1,0 +1,78 @@
+.tittle {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1),rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(237, 50, 55, 1),rgba(237, 50, 55, 1));
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Usamos flexbox para centrar vertical y horizontalmente */
+   /* Centramos horizontalmente */
+  
+}
+
+.tittle p {
+  font-size: 10vh; /* Tamaño del 50% del div */
+  font-weight:100; /* Letra gruesa */
+  font-family:Montserrat; /* Fuente específica */
+  margin-left: 40vh; /* Eliminamos el margen predeterminado del párrafo */
+}
+
+
+
+
+
+.background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 300vh;
+    background-image: url('../../assets/images/volquetaRoja.jpeg'); 
+    background-size: 100% 100%; /* Ajustado para llenar completamente el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1; 
+    
+    
+  }
+  .WhatsappAndMap-Cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .whatsappTitle{
+  
+    background-color: rgb(237, 50, 55,70%); /* Color de fondo de alerta en Bootstrap */
+    color: #000000; /* Color de texto de alerta en Bootstrap */
+    padding: 1rem; /* Ajusta el relleno según sea necesario */
+   
+    border-radius: 0.25rem;
+    text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  }
+ .whatsappText{
+  background-color:  rgba(136, 159, 172, 0.6); /* Color de fondo de alerta en Bootstrap */
+  color: #000000; /* Color de texto de alerta en Bootstrap */
+  padding: 1rem; /* Ajusta el relleno según sea necesario */
+  margin-top: 2vh;
+  border-radius: 0.25rem;
+  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
+ 
+
+ } 
+ .whatsappText p{
+  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
+  font-size: 3vh;
+ }
+ .mapCont{
+    width: 40vw;
+    margin-left:2vw;
+    margin-top: 10vh;
+    padding: 2vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(136, 159, 172, 0.6) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }

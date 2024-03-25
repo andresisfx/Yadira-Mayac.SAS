@@ -165,7 +165,7 @@
 }
 .custom-btn:hover {
   background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */
-
+  transition: all 0.5s ease; 
   transform: scale(1.1) 
 }
 .custom-btn:focus,
@@ -173,6 +173,45 @@
   transform: scale(1.1); /* Ajusta el valor según lo grande que quieras que se vean al hacer clic */
 }
 .whatsappButton:hover{
-  transform: scale(1.2) 
+  transform: scale(1.2);
+  transition: all 0.3s ease; 
+}
+/* button styles  */
+.shortCuts{
+  z-index: 1;position: absolute; top: 0; left: 0; width: 40%;
+  margin-top: 8vh;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 5vh;
+  padding-top: 0;
+  
+}
+.shortCuts a {
+  text-decoration: none;
+  color: #fff; 
+}
+.shortCut-btn {
+  background-color: transparent; 
+  margin-left: 100px;
+  color: #fff; 
+  max-width: 100%;
+  width: auto; 
+  margin-left: 1vw;
+  margin-top: 10vh;
+  font-size: 3.5vh;
+  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
+  border: none;
+  display: inline-block;
+  align-items: start;
+  transition: all 0.3s ease; 
 }
 
+.shortCut-btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  background-color: #FF0000;
+  transform: scale(1.1);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 50px;
+}
