@@ -15,15 +15,19 @@
   
 }
 .tittle{
-  background-color: rgb(237, 50, 55); /* Color de fondo de alerta en Bootstrap */
-  color: #000000; /* Color de texto de alerta en Bootstrap */
-  padding: 1rem; /* Ajusta el relleno según sea necesario */
-  height: 7vh;
+  background-color: transparent; /* Color de fondo de alerta en Bootstrap */
+  color: #000000; 
+  padding: 1rem;
+  height: auto;
   border-radius: 0.25rem;
-  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-  width:40vw;
+  
+  width:100%;
+  font-family: Monserrat;
  
+}
+.tittle h2{
+  font-weight:900;
+  font-size: 5vh;
 }
 .main-container {
     width: 50vw;
@@ -66,7 +70,7 @@
   .shortCut-btn {
     background-color: transparent; 
     
-    color: #fff; 
+    color: #000000; 
     max-width: 100%; 
     margin-left: 1vw;
     margin-top: 2vh;
@@ -93,41 +97,36 @@
     margin-top: 10vh;
     padding: 2vh;
     align-items: center;
-    /* justify-content: center; */
+    
     border-radius: 10px;
-    background-color: rgba(136, 159, 172, 0.6) ;
+    background-color: transparent ;
     display: flex;
     flex-direction: column;
     align-items: center;
  }
  .whatsappTitle{
   
-    background-color: rgb(237, 50, 55,70%); /* Color de fondo de alerta en Bootstrap */
+    background-color: transparent; /* Color de fondo de alerta en Bootstrap */
     color: #000000; /* Color de texto de alerta en Bootstrap */
     padding: 1rem; /* Ajusta el relleno según sea necesario */
     margin-top: 1vh;
     border-radius: 0.25rem;
-    text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+   
   }
  .whatsappText{
-  background-color:  rgba(136, 159, 172, 0.6); /* Color de fondo de alerta en Bootstrap */
+  background-color:  transparent; /* Color de fondo de alerta en Bootstrap */
   color: #000000; /* Color de texto de alerta en Bootstrap */
   padding: 1rem; /* Ajusta el relleno según sea necesario */
   margin-top: 2vh;
   border-radius: 0.25rem;
-  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
- 
-
  } 
  .whatsappText p{
-  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
   font-size: 3vh;
  }
  .shortCuts a{
   text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
   font-size: 3vh;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
  }
  .mapCont{
@@ -138,7 +137,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: rgba(136, 159, 172, 0.6) ;
+  background-color: transparent ;
   display: flex;
   flex-direction: column;
   align-items: center;
