@@ -1,5 +1,5 @@
 .background-image {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
@@ -15,21 +15,22 @@
   }
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr auto; /* Una columna para el contenido y otra para el carrusel */
-    gap: 30px; /* Espacio entre elementos */
-    align-items: center; /* Centra verticalmente los elementos */
+    grid-template-columns: 1fr auto; 
+    gap: 30px; 
+    align-items: center; 
     justify-self: start;
+    height: auto;
   }
   
   .content {
     display: flex;
     align-self: self-start;
     max-width: 33vw;
-    border: solid 3px #FF0000;
+    /* border: solid 3px #FF0000; */
     border-radius: 20px;
     font-size: larger;
     padding: 10px;
-    color: aliceblue;
+    color: rgb(74, 77, 80);
    
   }
   .content2 {
@@ -39,9 +40,9 @@
     border: solid 3px #ffffff;
     border-radius: 20px;
     font-size: larger;
-    font-weight: 600;
+    
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(74, 77, 80);;
     
   }
   
@@ -50,6 +51,7 @@
     max-width: 33vw;
     height: 30vh;
     min-width: 25vw;
+    margin-top: 2.7vh;
 }
   .title{
     display: flex;
@@ -68,15 +70,17 @@
     color: rgb(107, 125, 135);
   }
   .about-cont{
-    background-color: rgb(107, 125, 135);
-    border-radius: 20px; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px; 
     padding: 20px;
-    margin-top: 110px; 
-    margin-left: 40px;
+    margin-top: 10vh; 
+    margin-left: 5vw;
     align-self: flex-start;
     opacity: 0;
     transform: translateX(-100%); /* Inicialmente, desplázalo fuera de la pantalla hacia la izquierda */
     transition: opacity 1s ease, transform 1s ease; 
+    box-shadow:0px -3px 0px rgba(107, 125, 135, 1);
+
   }
   .about-cont.show {
     opacity: 1;
@@ -85,14 +89,18 @@
 }
 
   .red-cont{
-    background-color: #ede9e9;
-      border-radius: 20px; 
-      padding: 20px;
-      margin-top: 110px; 
-      margin-right: 40px;
-      align-self: flex-end;
-      opacity: 0;
-      transition: opacity 1s ease, transform 1s ease; 
+    
+    align-self: flex-end; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px; 
+    padding: 20px;
+    margin-top: 10vh; 
+    margin-right: 5vh; 
+   
+    
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease; 
+    box-shadow:0px -3px 0px rgb(240, 2, 2);
   }
   .red-cont.show {
     opacity: 1;
@@ -117,9 +125,11 @@
 }
 /* navBar style */
 .custom-navbar {
-  background-color: rgb(107, 125, 135,40%); 
+  background-color:transparent; /* background-color: rgb(107, 125, 135,40%);  */
   max-height: 15vh;
   width: 100%;
+  
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 .buttons{
   margin-top: 2vh;
@@ -161,12 +171,14 @@
   margin-left: 3vw;
   color: #fff; 
   font-size: 2.8vh;
-
+  text-shadow: -3px -3px 5px #000, 3px -3px 5px #000, -3px 3px 5px #000, 3px 3px 5px #000;
 }
 .custom-btn:hover {
   background-color: rgb(237,50,55); /* Cambia el color al pasar el mouse (hover) */
   transition: all 0.5s ease; 
-  transform: scale(1.1) 
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+
 }
 .custom-btn:focus,
 .custom-btn:active {
